@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import AppointmentsIndex from "./views/AppointmentsIndex.vue";
-import Login from "./views/Login.vue";
-import UserSignup from "./views/UserSignup.vue";
 import ProfessionalSignup from "./views/ProfessionalSignup.vue";
+import ProfessionalLogin from "./views/ProfessionalLogin.vue";
+import UserLogin from "./views/UserLogin.vue";
+import UserSignup from "./views/UserSignup.vue";
 
 Vue.use(Router);
 
@@ -25,9 +26,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/login",
-      name: "login",
-      component: Login
+      path: "/professional-signup",
+      name: "professional-signup",
+      component: ProfessionalSignup
+    },
+    {
+      path: "/professional-login",
+      name: "professional-login",
+      component: ProfessionalLogin
     },
     {
       path: "/user-signup",
@@ -35,9 +41,9 @@ export default new Router({
       component: UserSignup
     },
     {
-      path: "/professional-signup",
-      name: "professional-signup",
-      component: ProfessionalSignup
+      path: "/user-login",
+      name: "user-login",
+      component: UserLogin
     }
   ]
 });

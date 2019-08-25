@@ -7,7 +7,11 @@
       |
       <router-link to="/user-signup">UserSignup</router-link>
       |
+      <router-link to="/user-login">UserLogin</router-link>
+      |
       <router-link to="/professional-signup">ProfessionalSignup</router-link>
+      |
+      <router-link to="/professional-login">ProfessionalLogin</router-link>
     </div>
     <router-view />
   </div>

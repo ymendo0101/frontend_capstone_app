@@ -1,8 +1,8 @@
 <template>
-  <div class="container login">
+  <div class="professional-login">
     <div class="container">
       <form v-on:submit.prevent="submit()">
-        <h1>Login</h1>
+        <h1>Professional Login</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
@@ -26,8 +26,8 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      email: "",
-      password: "",
+      email: "cpratt@email.com",
+      password: "password",
       errors: []
     };
   },
@@ -38,7 +38,7 @@ export default {
         password: this.password
       };
       axios
-        .post("/api/sessions", params)
+        .post("/api/sessions_professional", params)
         .then(response => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);

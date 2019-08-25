@@ -1,7 +1,7 @@
 <template>
   <div class="professional-signup">
     <div class="container">
-      <form v-on:submit.prevent="submit()">
+      <form v-on:submit.prevent="submit()" enctype="multipart/form-data">
         <h1>Professional Signup</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
