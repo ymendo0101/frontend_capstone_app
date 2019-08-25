@@ -1,23 +1,28 @@
 <template>
-  <div class="Appointments">
+  <div class="container home">
     <h1>{{ message }}</h1>
     <div v-for="appointment in appointments">
-      <p>Start_datetime: {{ appointment.start_datetime }}</p>
-      <p>End_datetime: {{ appointment.end_datetime }}</p>
-      <p>status: {{ appointment.status }}</p>
+      <!-- <img v-bind:src="appointment." alt="" /> -->
+      <h2>Service: {{ appointment.service.name }}</h2>
+      <h2>Professional: {{ appointment.professional.name }}</h2>
+      <h2>Start time: {{ appointment.start_datetime }}</h2>
+      <h2>End time: {{ appointment.end_datetime }}</h2>
+      <h2>Status: {{ appointment.status }}</h2>
+      <router-link v-bind:to="`/appointments/${appointment.id}`">Appointment Info</router-link>
     </div>
   </div>
 </template>
-
-<style></style>
-
+<style>
+img {
+  width: 100%;
+}
+</style>
 <script>
 import axios from "axios";
-
 export default {
   data: function() {
     return {
-      message: "Book Me!",
+      message: "Upcoming Booked Appointments!",
       appointments: []
     };
   },

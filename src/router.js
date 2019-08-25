@@ -5,6 +5,8 @@ import ProfessionalSignup from "./views/ProfessionalSignup.vue";
 import ProfessionalLogin from "./views/ProfessionalLogin.vue";
 import UserLogin from "./views/UserLogin.vue";
 import UserSignup from "./views/UserSignup.vue";
+import AppointmentsShow from "./views/AppointmentsShow.vue";
+import AppointmentsEdit from "./views/AppointmentsEdit.vue";
 
 Vue.use(Router);
 
@@ -13,7 +15,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/appointments-index",
+      path: "/",
       name: "appointments-index",
       component: AppointmentsIndex
     },
@@ -44,6 +46,21 @@ export default new Router({
       path: "/user-login",
       name: "user-login",
       component: UserLogin
+    },
+    {
+      path: "/appointments",
+      name: "appointments-index",
+      component: AppointmentsIndex
+    },
+    {
+      path: "/appointments/:id",
+      name: "appointments-show",
+      component: AppointmentsShow
+    },
+    {
+      path: "/appointments/:id/edit",
+      name: "appointments-edit",
+      component: AppointmentsEdit
     }
   ]
 });

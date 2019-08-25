@@ -12,6 +12,8 @@
       <router-link to="/professional-signup">ProfessionalSignup</router-link>
       |
       <router-link to="/professional-login">ProfessionalLogin</router-link>
+      |
+      <router-link to="/appointments">Appointments</router-link>
     </div>
     <router-view />
   </div>
