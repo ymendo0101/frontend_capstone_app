@@ -4,10 +4,18 @@
     <!--   <img v-bind:src="appointment.image_url" alt="" /> -->
     <p>Service: {{ appointment.service.name }}</p>
     <p>Professional: {{ appointment.professional.name }}</p>
+    <p>Email: {{ appointment.professional.email }}</p>
     <p>Start time: {{ appointment.start_datetime }}</p>
     <p>End time: {{ appointment.end_datetime }}</p>
-    <p>Status: {{ appointment.status }}</p>
-    <button v-on:click="destroyAppointment(appointment)">Destroy appointment</button>
+    <p>
+      Status:
+      <select v-model="appointment.status">
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Declined">Declined</option>
+      </select>
+      <button v-on:click="updateAppointment()">Update Status</button>
+    </p>
     <router-link v-bind:to="`/appointments/${appointment.id}/edit`">Edit appointment</router-link>
     <router-link to="/">Back to all appointments</router-link>
   </div>
@@ -36,9 +44,12 @@ export default {
     });
   },
   methods: {
-    destroyRecipe: function(recipe) {
-      axios.delete("/api/recipes/" + recipe.id).then(response => {
-        this.$router.push("/");
+    updateAppointment: function() {
+      var params = {
+        status: this.appointment.status
+      };
+      axios.patch("/api/appointments/" + this.appointment.id, params).then(response => {
+        this.$router.push("/appointments");
       });
     }
   }

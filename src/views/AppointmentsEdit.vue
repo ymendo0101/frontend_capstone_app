@@ -1,12 +1,16 @@
 <template>
   <div class="container home">
-    <h4>Edit appointment</h4>
+    <h4>Edit appointment Status</h4>
     <div>
-      Start Time:
-      <input v-model="appointment.start_time" type="text" />
-      End Time:
-      <input v-model="appointment.end_time" type="text" />
-      <button v-on:click="updateAppointment(appointment)">Update</button>
+      Change Appointment Status:
+      <select v-model="appointment.status">
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Declined">Declined</option>
+      </select>
+      <!--       <input v-model="appointment.appointment_status_id" type="text" />
+ -->
+      <button v-on:click="updateAppointment()">Update</button>
     </div>
   </div>
 </template>
@@ -32,12 +36,11 @@ export default {
     });
   },
   methods: {
-    updateProduct: function(inputAppointment) {
+    updateAppointment: function() {
       var params = {
-        start_time: inputAppointment.start_time,
-        end_time: inputAppointment.end_time
+        status: this.appointment.status
       };
-      axios.patch("/api/appointments/" + inputAppointment.id, params).then(response => {
+      axios.patch("/api/appointments/" + this.appointment.id, params).then(response => {
         this.$router.push("/appointments");
       });
     }

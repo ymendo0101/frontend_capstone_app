@@ -3,8 +3,10 @@
     <h1>{{ message }}</h1>
     <div v-for="appointment in appointments">
       <!-- <img v-bind:src="appointment." alt="" /> -->
+      <!-- <h2>Client: {{ appointment.user.name }}</h2> -->
       <h2>Service: {{ appointment.service.name }}</h2>
       <h2>Professional: {{ appointment.professional.name }}</h2>
+      <h2>Email: {{ appointment.professional.email }}</h2>
       <h2>Start time: {{ appointment.start_datetime }}</h2>
       <h2>End time: {{ appointment.end_datetime }}</h2>
       <h2>Status: {{ appointment.status }}</h2>
