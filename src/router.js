@@ -1,12 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
-import AppointmentsIndex from "./views/AppointmentsIndex.vue";
 import ProfessionalSignup from "./views/ProfessionalSignup.vue";
 import ProfessionalLogin from "./views/ProfessionalLogin.vue";
 import UserLogin from "./views/UserLogin.vue";
 import UserSignup from "./views/UserSignup.vue";
+import AppointmentsIndex from "./views/AppointmentsIndex.vue";
 import AppointmentsShow from "./views/AppointmentsShow.vue";
 import AppointmentsEdit from "./views/AppointmentsEdit.vue";
+import AppointmentsNew from "./views/AppointmentsNew.vue";
 
 Vue.use(Router);
 
@@ -51,6 +52,11 @@ export default new Router({
       path: "/appointments",
       name: "appointments-index",
       component: AppointmentsIndex
+    },
+    {
+      path: "/appointments/new",
+      name: "appointments-new",
+      component: AppointmentsNew
     },
     {
       path: "/appointments/:id",
