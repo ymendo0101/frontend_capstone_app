@@ -4,11 +4,17 @@
       <h1>New Appointment</h1>
       <div class="form-group">
         Service:
-        <input v-model="service" type="text" class="form-control" />
+        <select v-model="service_id">
+          <option v-for="service in services" v-bind:value="service.id">{{ service.name }}</option>
+        </select>
+        <!-- <input v-model="service" type="text" class="form-control" /> -->
       </div>
       <div class="form-group">
         Professional:
-        <input v-model="professional" type="text" class="form-control" />
+        <select v-model="professional_id">
+          <option v-for="professional in professionals" v-bind:value="professional.id">{{ professional.name }}</option>
+        </select>
+        <!--         <input v-model="professional" type="text" class="form-control" /> -->
       </div>
       <div class="form-group">
         Start Time:
@@ -30,11 +36,36 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      service: "",
+      services: [],
+      professionals: [],
+      professional_id: null,
+      service_id: null,
       professional: "",
       startDatetime: "",
       endDatetime: ""
+      // services: [],
+      // professionals: []
     };
+  },
+
+  methods: {
+    // setFile: function(event) {
+    //   if (event.target.files.length > 0) {
+    //     this.image = event.target.files[0];
+  },
+
+  created: function() {
+    // get all services and console.log them
+    axios.get("/api/services").then(response => {
+      this.services = response.data;
+      console.log("Services", this.services);
+    });
+
+    // get all professionals and console.log them
+    axios.get("/api/professionals").then(response => {
+      this.professionals = response.data;
+      console.log("Professionals", this.professionals);
+    });
   },
   // methods: {
   //   setFile: function(event) {
@@ -45,8 +76,8 @@ export default {
   createAppointment: function() {
     console.log("Create the appointment...");
     var formData = new FormData();
-    formData.append("service", this.service);
-    formData.append("professional", this.professional);
+    formData.append("service_id", this.service.id);
+    formData.append("professional_id", this.professional.id);
     formData.append("start_datetime", this.start_datetime);
     formData.append("end_datetime", this.end_datetime);
     axios
