@@ -18,11 +18,11 @@
       </div>
       <div class="form-group">
         Start Time:
-        <input v-model="startDatetime" type="text" class="form-control" />
+        <input v-model="start_datetime" type="text" class="form-control" />
       </div>
       <div class="form-group">
         End Time:
-        <input v-model="endDatetime" type="text" class="form-control" />
+        <input v-model="end_datetime" type="text" class="form-control" />
       </div>
       <input type="submit" value="Create" class="btn btn-primary" />
     </form>
@@ -38,17 +38,30 @@ export default {
     return {
       services: [],
       professionals: [],
-      professional_id: null,
       service_id: null,
+      professional_id: null,
       professional: "",
-      startDatetime: "",
-      endDatetime: ""
-      // services: [],
-      // professionals: []
+      start_datetime: "",
+      end_datetime: ""
     };
   },
 
   methods: {
+    createAppointment: function() {
+      console.log("Create the appointment...");
+      var formData = new FormData();
+      formData.append("service_id", this.service_id);
+      formData.append("professional_id", this.professional_id);
+      formData.append("start_datetime", this.start_datetime);
+      formData.append("end_datetime", this.end_datetime);
+      axios
+        .post("/api/appointments", formData)
+        .then(response => {
+          console.log("Success", response.data);
+          this.$router.push("/appointments");
+        })
+        .catch(error => console.log(error.response));
+    }
     // setFile: function(event) {
     //   if (event.target.files.length > 0) {
     //     this.image = event.target.files[0];
@@ -66,27 +79,6 @@ export default {
       this.professionals = response.data;
       console.log("Professionals", this.professionals);
     });
-  },
-  // methods: {
-  //   setFile: function(event) {
-  //     if (event.target.files.length > 0) {
-  //       this.image = event.target.files[0];
-  //     }
-  //   },
-  createAppointment: function() {
-    console.log("Create the appointment...");
-    var formData = new FormData();
-    formData.append("service_id", this.service.id);
-    formData.append("professional_id", this.professional.id);
-    formData.append("start_datetime", this.start_datetime);
-    formData.append("end_datetime", this.end_datetime);
-    axios
-      .post("/api/appointments", formData)
-      .then(response => {
-        console.log("Success", response.data);
-        this.$router.push("/appointments");
-      })
-      .catch(error => console.log(error.response));
   }
 };
 </script>
