@@ -21,7 +21,7 @@
               </div>
             </div>
             <h5 class="card-title">Pending</h5>
-            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu.</h6>
+            <h6 class="card-subtitle text-muted">View your pending to be confirmed appointments</h6>
           </div>
           <div class="card-body p-3">
             <div id="tasks-upcoming">
@@ -40,7 +40,13 @@
                   <p>End time: {{ appointment.end_datetime }}</p>
                   <p>Status: {{ appointment.status }}</p>
                   <div class="float-right mt-n1">
-                    <img src="img/avatars/avatar.jpg" width="32" height="32" class="rounded-circle" alt="Avatar" />
+                    <img
+                      src="https://www.pngfind.com/pngs/m/70-705485_tonystark-sticker-robert-downey-jr-con-traje-hd.png"
+                      width="36"
+                      height="36"
+                      class="rounded-circle"
+                      alt="Avatar"
+                    />
                   </div>
                   <!-- <a class="btn btn-primary btn-sm" href="#">View</a> -->
                   <router-link v-bind:to="`/appointments/${appointment.id}`" class="btn btn-primary btn-sm">
@@ -50,7 +56,7 @@
               </div>
             </div>
 
-            <a href="#" class="btn btn-primary btn-block">Create new appointment</a>
+            <!--             <a href="#" class="btn btn-primary btn-block">Create new appointment</a> -->
           </div>
         </div>
       </div>
@@ -74,7 +80,7 @@
               </div>
             </div>
             <h5 class="card-title">Confirmed</h5>
-            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu.</h6>
+            <h6 class="card-subtitle text-muted">View all confirmed appointments.</h6>
           </div>
           <div class="card-body">
             <div id="tasks-progress">
@@ -126,11 +132,11 @@
               </div>
             </div>
             <h5 class="card-title">Declined</h5>
-            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu.</h6>
+            <h6 class="card-subtitle text-muted">View your declined appointments.</h6>
           </div>
           <div class="card-body">
             <div id="tasks-hold">
-              <div v-for="appointment in confirmedAppointments" class="card mb-3 bg-light cursor-grab">
+              <div v-for="appointment in declinedAppointments" class="card mb-3 bg-light cursor-grab">
                 <div class="card mb-3 bg-light cursor-grab">
                   <div class="card-body p-3">
                     <div class="float-right mr-n2">

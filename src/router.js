@@ -8,6 +8,8 @@ import AppointmentsIndex from "./views/AppointmentsIndex.vue";
 import AppointmentsShow from "./views/AppointmentsShow.vue";
 import AppointmentsEdit from "./views/AppointmentsEdit.vue";
 import AppointmentsNew from "./views/AppointmentsNew.vue";
+import ProfessionalsIndex from "./views/ProfessionalsIndex.vue";
+import UsersIndex from "./views/UsersIndex.vue";
 
 Vue.use(Router);
 
@@ -37,6 +39,16 @@ export default new Router({
       path: "/professional-login",
       name: "professional-login",
       component: ProfessionalLogin
+    },
+    {
+      path: "/professionals",
+      name: "ProfessionalsIndex",
+      component: ProfessionalsIndex
+    },
+    {
+      path: "/users",
+      name: "UsersIndex",
+      component: UsersIndex
     },
     {
       path: "/user-signup",

@@ -14,9 +14,9 @@
         </a>
         <div class="sidebar-content">
           <div class="sidebar-user">
-            <img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
-            <div class="font-weight-bold">Linda Miller</div>
-            <small>Front-end Developer</small>
+            <img src="/img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
+            <div class="font-weight-bold">{{ {}.id }}</div>
+            <!-- <small>Front-end Developer</small> -->
           </div>
 
           <ul class="sidebar-nav">
@@ -36,16 +36,19 @@
               </a>
               <ul id="pages" class="sidebar-dropdown list-unstyled collapse show" data-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="/appointments">Appointments</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/professionals">Professionals</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/appointments/new">Create appointment</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/users">Users</a></li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="pages-clients.html">
+                  <a class="sidebar-link" href="/pages-clients.html">
                     Clients
                     <span class="sidebar-badge badge badge-pill badge-primary">New</span>
                   </a>
                 </li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-invoice.html">Invoice</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-pricing.html">Pricing</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-tasks.html">Tasks</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-invoice.html">Invoice</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-pricing.html">Pricing</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-tasks.html">Tasks</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-blank.html">Blank Page</a></li>
               </ul>
             </li>
             <li class="sidebar-item">
@@ -57,10 +60,10 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="/user-login">User Login</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="user-signup">User Signup</a></li>
                 <!-- <li class="sidebar-item"> -->
-                <!--   <a class="sidebar-link" href="pages-reset-password.html">Reset Password</a> -->
+                <!--   <a class="sidebar-link" href="/pages-reset-password.html">Reset Password</a> -->
                 <!-- </li> -->
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-404.html">404 Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-500.html">500 Page</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-404.html">404 Page</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/pages-500.html">500 Page</a></li>
               </ul>
             </li>
 
@@ -210,7 +213,7 @@
                       <div class="row no-gutters align-items-center">
                         <div class="col-2">
                           <img
-                            src="img/avatars/avatar-5.jpg"
+                            src="/img/avatars/avatar-5.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Michelle Bilodeau"
                           />
@@ -226,7 +229,7 @@
                       <div class="row no-gutters align-items-center">
                         <div class="col-2">
                           <img
-                            src="img/avatars/avatar-3.jpg"
+                            src="/img/avatars/avatar-3.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Kathie Burton"
                           />
@@ -242,7 +245,7 @@
                       <div class="row no-gutters align-items-center">
                         <div class="col-2">
                           <img
-                            src="img/avatars/avatar-2.jpg"
+                            src="/img/avatars/avatar-2.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Alexander Groves"
                           />
@@ -258,7 +261,7 @@
                       <div class="row no-gutters align-items-center">
                         <div class="col-2">
                           <img
-                            src="img/avatars/avatar-4.jpg"
+                            src="/img/avatars/avatar-4.jpg"
                             class="avatar img-fluid rounded-circle"
                             alt="Daisy Seger"
                           />
