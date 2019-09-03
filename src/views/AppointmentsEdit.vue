@@ -10,7 +10,7 @@
       </select>
       <!--       <input v-model="appointment.appointment_status_id" type="text" />
  -->
-      <button v-on:click="updateAppointment()">Update</button>
+      <!-- <button v-on:click="updateAppointment()">Update</button> -->
     </div>
   </div>
 </template>

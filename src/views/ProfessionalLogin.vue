@@ -26,7 +26,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      email: "dwashington@email.com",
+      email: "tstark@email.com",
       password: "password",
       errors: []
     };
@@ -42,6 +42,8 @@ export default {
         .then(response => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
+          localStorage.removeItem("isUser");
+          localStorage.setItem("isProfessional", "true");
           this.$router.push("/appointments");
         })
         .catch(error => {

@@ -8,6 +8,7 @@ import AppointmentsIndex from "./views/AppointmentsIndex.vue";
 import AppointmentsShow from "./views/AppointmentsShow.vue";
 import AppointmentsEdit from "./views/AppointmentsEdit.vue";
 import AppointmentsNew from "./views/AppointmentsNew.vue";
+import Calendar from "./views/Calendar.vue";
 import ProfessionalsIndex from "./views/ProfessionalsIndex.vue";
 import UsersIndex from "./views/UsersIndex.vue";
 
@@ -79,6 +80,11 @@ export default new Router({
       path: "/appointments/:id/edit",
       name: "appointments-edit",
       component: AppointmentsEdit
+    },
+    {
+      path: "/calendar",
+      name: "calendar",
+      component: Calendar
     }
   ]
 });

@@ -33,12 +33,22 @@
                       <span class="custom-control-label text-hide">Checkbox</span>
                     </label>
                   </div>
-                  <p>Service: {{ appointment.service.name }}</p>
-                  <p>Professional: {{ appointment.professional.name }}</p>
-                  <p>Email: {{ appointment.professional.email }}</p>
-                  <p>Start time: {{ appointment.start_datetime }}</p>
-                  <p>End time: {{ appointment.end_datetime }}</p>
-                  <p>Status: {{ appointment.status }}</p>
+                  <div v-if="isProfessional">
+                    <p>Service: {{ appointment.service.name }}</p>
+                    <p>Client: {{ appointment.user.name }}</p>
+                    <p>Email: {{ appointment.user.email }}</p>
+                    <p>Start time: {{ appointment.start_datetime }}</p>
+                    <p>End time: {{ appointment.end_datetime }}</p>
+                    <p>Status: {{ appointment.status }}</p>
+                  </div>
+                  <div v-if="isUser">
+                    <p>Service: {{ appointment.service.name }}</p>
+                    <p>Professional: {{ appointment.professional.name }}</p>
+                    <p>Email: {{ appointment.professional.email }}</p>
+                    <p>Start time: {{ appointment.start_datetime }}</p>
+                    <p>End time: {{ appointment.end_datetime }}</p>
+                    <p>Status: {{ appointment.status }}</p>
+                  </div>
                   <div class="float-right mt-n1">
                     <img
                       src="https://www.pngfind.com/pngs/m/70-705485_tonystark-sticker-robert-downey-jr-con-traje-hd.png"
@@ -93,12 +103,24 @@
                         <span class="custom-control-label text-hide">Checkbox</span>
                       </label>
                     </div>
-                    <p>Service: {{ appointment.service.name }}</p>
-                    <p>Professional: {{ appointment.professional.name }}</p>
-                    <p>Email: {{ appointment.professional.email }}</p>
-                    <p>Start time: {{ appointment.start_datetime }}</p>
-                    <p>End time: {{ appointment.end_datetime }}</p>
-                    <p>Status: {{ appointment.status }}</p>
+                    <div v-if="isProfessional">
+                      <p>Service: {{ appointment.service.name }}</p>
+                      <p>Client: {{ appointment.user.name }}</p>
+                      <p>Email: {{ appointment.user.email }}</p>
+                      <p>Start time: {{ appointment.start_datetime }}</p>
+                      <p>End time: {{ appointment.end_datetime }}</p>
+                      <p>Status: {{ appointment.status }}</p>
+                    </div>
+
+                    <div v-if="isUser">
+                      <p>Service: {{ appointment.service.name }}</p>
+                      <p>Professional: {{ appointment.professional.name }}</p>
+                      <p>Email: {{ appointment.professional.email }}</p>
+                      <p>Start time: {{ appointment.start_datetime }}</p>
+                      <p>End time: {{ appointment.end_datetime }}</p>
+                      <p>Status: {{ appointment.status }}</p>
+                    </div>
+
                     <div class="float-right mt-n1">
                       <img src="img/avatars/avatar.jpg" width="32" height="32" class="rounded-circle" alt="Avatar" />
                     </div>
@@ -145,12 +167,25 @@
                         <span class="custom-control-label text-hide">Checkbox</span>
                       </label>
                     </div>
-                    <p>Service: {{ appointment.service.name }}</p>
-                    <p>Professional: {{ appointment.professional.name }}</p>
-                    <p>Email: {{ appointment.professional.email }}</p>
-                    <p>Start time: {{ appointment.start_datetime }}</p>
-                    <p>End time: {{ appointment.end_datetime }}</p>
-                    <p>Status: {{ appointment.status }}</p>
+
+                    <div v-if="isProfessional">
+                      <p>Service: {{ appointment.service.name }}</p>
+                      <p>Client: {{ appointment.user.name }}</p>
+                      <p>Email: {{ appointment.user.email }}</p>
+                      <p>Start time: {{ appointment.start_datetime }}</p>
+                      <p>End time: {{ appointment.end_datetime }}</p>
+                      <p>Status: {{ appointment.status }}</p>
+                    </div>
+
+                    <div v-if="isUser">
+                      <p>Service: {{ appointment.service.name }}</p>
+                      <p>Professional: {{ appointment.professional.name }}</p>
+                      <p>Email: {{ appointment.professional.email }}</p>
+                      <p>Start time: {{ appointment.start_datetime }}</p>
+                      <p>End time: {{ appointment.end_datetime }}</p>
+                      <p>Status: {{ appointment.status }}</p>
+                    </div>
+
                     <div class="float-right mt-n1">
                       <img src="img/avatars/avatar-4.jpg" width="32" height="32" class="rounded-circle" alt="Avatar" />
                     </div>
@@ -180,7 +215,9 @@ export default {
   data: function() {
     return {
       message: "Upcoming Booked Appointments!",
-      appointments: []
+      appointments: [],
+      isUser: localStorage.getItem("isUser"),
+      isProfessional: localStorage.getItem("isProfessional")
     };
   },
   created: function() {

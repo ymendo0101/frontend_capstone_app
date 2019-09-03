@@ -59,6 +59,10 @@
               <ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="/user-login">User Login</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="user-signup">User Signup</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/professional-login">Professional Login</a></li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/professional-signup">Professional Signup</a>
+                </li>
                 <!-- <li class="sidebar-item"> -->
                 <!--   <a class="sidebar-link" href="/pages-reset-password.html">Reset Password</a> -->
                 <!-- </li> -->
