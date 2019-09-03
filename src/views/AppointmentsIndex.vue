@@ -40,6 +40,16 @@
                     <p>Start time: {{ appointment.start_datetime }}</p>
                     <p>End time: {{ appointment.end_datetime }}</p>
                     <p>Status: {{ appointment.status }}</p>
+
+                    <div class="float-right mt-n1">
+                      <img
+                        v-bind:src="appointment.user.image_url"
+                        width="48"
+                        height="48"
+                        class="rounded-circle"
+                        alt="Avatar"
+                      />
+                    </div>
                   </div>
                   <div v-if="isUser">
                     <p>Service: {{ appointment.service.name }}</p>
@@ -48,15 +58,16 @@
                     <p>Start time: {{ appointment.start_datetime }}</p>
                     <p>End time: {{ appointment.end_datetime }}</p>
                     <p>Status: {{ appointment.status }}</p>
-                  </div>
-                  <div class="float-right mt-n1">
-                    <img
-                      src="https://www.pngfind.com/pngs/m/70-705485_tonystark-sticker-robert-downey-jr-con-traje-hd.png"
-                      width="36"
-                      height="36"
-                      class="rounded-circle"
-                      alt="Avatar"
-                    />
+
+                    <div class="float-right mt-n1">
+                      <img
+                        v-bind:src="appointment.professional.image_url"
+                        width="48"
+                        height="48"
+                        class="rounded-circle"
+                        alt="Avatar"
+                      />
+                    </div>
                   </div>
                   <!-- <a class="btn btn-primary btn-sm" href="#">View</a> -->
                   <router-link v-bind:to="`/appointments/${appointment.id}`" class="btn btn-primary btn-sm">
@@ -103,6 +114,7 @@
                         <span class="custom-control-label text-hide">Checkbox</span>
                       </label>
                     </div>
+
                     <div v-if="isProfessional">
                       <p>Service: {{ appointment.service.name }}</p>
                       <p>Client: {{ appointment.user.name }}</p>
@@ -110,6 +122,15 @@
                       <p>Start time: {{ appointment.start_datetime }}</p>
                       <p>End time: {{ appointment.end_datetime }}</p>
                       <p>Status: {{ appointment.status }}</p>
+                      <div class="float-right mt-n1">
+                        <img
+                          v-bind:src="appointment.user.image_url"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt="Avatar"
+                        />
+                      </div>
                     </div>
 
                     <div v-if="isUser">
@@ -119,10 +140,16 @@
                       <p>Start time: {{ appointment.start_datetime }}</p>
                       <p>End time: {{ appointment.end_datetime }}</p>
                       <p>Status: {{ appointment.status }}</p>
-                    </div>
 
-                    <div class="float-right mt-n1">
-                      <img src="img/avatars/avatar.jpg" width="32" height="32" class="rounded-circle" alt="Avatar" />
+                      <div class="float-right mt-n1">
+                        <img
+                          v-bind:src="appointment.user.image_url"
+                          width="58"
+                          height="58"
+                          class="rounded-circle"
+                          alt="Avatar"
+                        />
+                      </div>
                     </div>
                     <router-link v-bind:to="`/appointments/${appointment.id}`" class="btn btn-primary btn-sm">
                       Appointment Info
@@ -175,6 +202,15 @@
                       <p>Start time: {{ appointment.start_datetime }}</p>
                       <p>End time: {{ appointment.end_datetime }}</p>
                       <p>Status: {{ appointment.status }}</p>
+                      <div class="float-right mt-n1">
+                        <img
+                          v-bind:src="appointment.user.image_url"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt="Avatar"
+                        />
+                      </div>
                     </div>
 
                     <div v-if="isUser">
@@ -184,10 +220,15 @@
                       <p>Start time: {{ appointment.start_datetime }}</p>
                       <p>End time: {{ appointment.end_datetime }}</p>
                       <p>Status: {{ appointment.status }}</p>
-                    </div>
-
-                    <div class="float-right mt-n1">
-                      <img src="img/avatars/avatar-4.jpg" width="32" height="32" class="rounded-circle" alt="Avatar" />
+                      <div class="float-right mt-n1">
+                        <img
+                          v-bind:src="appointment.user.image_url"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt="Avatar"
+                        />
+                      </div>
                     </div>
                     <router-link v-bind:to="`/appointments/${appointment.id}`" class="btn btn-primary btn-sm">
                       Appointment Info
@@ -232,10 +273,10 @@ export default {
       return this.appointments.filter(appointment => appointment.status === "pending");
     },
     confirmedAppointments: function() {
-      return this.appointments.filter(appointment => appointment.status === "Confirmed");
+      return this.appointments.filter(appointment => appointment.status === "confirmed");
     },
     declinedAppointments: function() {
-      return this.appointments.filter(appointment => appointment.status === "Declined");
+      return this.appointments.filter(appointment => appointment.status === "declined");
     }
   }
 };

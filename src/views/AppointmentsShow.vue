@@ -21,9 +21,9 @@
     <p v-if="isProfessional">
       Status:
       <select v-model="appointment.status">
-        <option value="Pending">Pending</option>
-        <option value="Confirmed">Confirmed</option>
-        <option value="Declined">Declined</option>
+        <option value="pending">Pending</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="declined">Declined</option>
       </select>
       <button v-on:click="updateAppointment()">Update Status</button>
     </p>
