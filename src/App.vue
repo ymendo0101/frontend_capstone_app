@@ -10,11 +10,11 @@
           <svg>
             <use xlink:href="#ion-ios-pulse-strong"></use>
           </svg>
-          Spark
+          Book Me!
         </a>
         <div class="sidebar-content">
           <div class="sidebar-user">
-            <img src="/img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
+            <img v-bind:src="image_url" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
             <div class="font-weight-bold">{{ {}.id }}</div>
             <!-- <small>Front-end Developer</small> -->
           </div>
@@ -39,16 +39,6 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="/professionals">Professionals</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="/appointments/new">Create appointment</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="/users">Users</a></li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="/pages-clients.html">
-                    Clients
-                    <span class="sidebar-badge badge badge-pill badge-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-invoice.html">Invoice</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-pricing.html">Pricing</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-tasks.html">Tasks</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-blank.html">Blank Page</a></li>
               </ul>
             </li>
             <li class="sidebar-item">
@@ -66,88 +56,13 @@
                 <!-- <li class="sidebar-item"> -->
                 <!--   <a class="sidebar-link" href="/pages-reset-password.html">Reset Password</a> -->
                 <!-- </li> -->
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-404.html">404 Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/pages-500.html">500 Page</a></li>
-              </ul>
-            </li>
-
-            <li class="sidebar-header">
-              Elements
-            </li>
-            <li class="sidebar-item">
-              <a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-flask"></i>
-                <span class="align-middle">User Interface</span>
-              </a>
-              <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-grid.html">Grid</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-modals.html">Modals</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-notifications.html">Notifications</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a href="#charts" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-chart-pie"></i>
-                <span class="align-middle">Charts</span>
-                <span class="sidebar-badge badge badge-pill badge-primary">New</span>
-              </a>
-              <ul id="charts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">Chart.js</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">ApexCharts</a></li>
-              </ul>
-            </li>
-
-            <li class="sidebar-item">
-              <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-check-square"></i>
-                <span class="align-middle">Forms</span>
-              </a>
-              <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Layouts</a></li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="forms-basic-elements.html">Basic Elements</a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="forms-advanced-elements.html">Advanced Elements</a>
-                </li>
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-input-groups.html">Input Groups</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-editors.html">Editors</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-validation.html">Validation</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-wizard.html">Wizard</a></li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a href="#tables" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-table"></i>
-                <span class="align-middle">Tables</span>
-              </a>
-              <ul id="tables" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="tables-bootstrap.html">Bootstrap</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="tables-datatables.html">DataTables</a></li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a href="#icons" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-heart"></i>
-                <span class="align-middle">Icons</span>
-              </a>
-              <ul id="icons" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-feather.html">Feather</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-ion.html">Ion Icons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-font-awesome.html">Font Awesome</a></li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="calendar.html">
+              <a class="sidebar-link" href="/calendar">
                 <i class="align-middle mr-2 far fa-fw fa-calendar-alt"></i>
                 <span class="align-middle">Calendar</span>
-                <span class="sidebar-badge badge badge-pill badge-success">Special</span>
+                <span class="sidebar-badge badge badge-pill badge-success">New</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -158,28 +73,6 @@
               <ul id="maps" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html">Google Maps</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="maps-vector.html">Vector Maps</a></li>
-              </ul>
-            </li>
-
-            <li class="sidebar-header">
-              Extras
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="documentation.html">
-                <i class="align-middle mr-2 fas fa-fw fa-book"></i>
-                <span class="align-middle">Getting Started</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a href="#layouts" data-toggle="collapse" class="sidebar-link collapsed">
-                <i class="align-middle mr-2 fas fa-fw fa-desktop"></i>
-                <span class="align-middle">Layouts</span>
-              </a>
-              <ul id="layouts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="layouts-sidebar-left.html">Left Sidebar</a></li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="layouts-sidebar-right.html">Right Sidebar</a>
-                </li>
               </ul>
             </li>
           </ul>
@@ -385,14 +278,6 @@
           </div>
         </nav>
         <main class="content">
-          <div class="container-fluid">
-            <div class="header text-center">
-              <h1 class="header-title">
-                Welcome back, Linda!
-              </h1>
-              <p class="header-subtitle">You have 24 new messages and 5 new notifications.</p>
-            </div>
-          </div>
           <br />
           <br />
           <br />
@@ -421,10 +306,10 @@
                 </ul>
               </div>
               <div class="col-4 text-right">
-                <p class="mb-0">
+                <!--                 <p class="mb-0">
                   &copy; 2019 -
                   <a href="dashboard.html" class="text-muted">Spark</a>
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -448,6 +333,11 @@
 
 <script>
 export default {
+  data: function() {
+    return {
+      image_url: localStorage.getItem("image_url") || "/img/avatars/avatar.jpg"
+    };
+  },
   mounteds: function() {
     $(function() {
       // Line chart

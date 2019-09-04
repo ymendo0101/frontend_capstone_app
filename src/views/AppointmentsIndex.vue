@@ -144,8 +144,8 @@
                       <div class="float-right mt-n1">
                         <img
                           v-bind:src="appointment.user.image_url"
-                          width="58"
-                          height="58"
+                          width="48"
+                          height="48"
                           class="rounded-circle"
                           alt="Avatar"
                         />

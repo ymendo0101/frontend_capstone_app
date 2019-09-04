@@ -8,9 +8,13 @@
       <p>Email: {{ appointment.user.email }}</p>
       <p>Start time: {{ appointment.start_datetime }}</p>
       <p>End time: {{ appointment.end_datetime }}</p>
+      <!--       <td><img v-bind:src="user.image_url" width="32" height="32" class="rounded-circle my-n1" alt="Avatar" /></td> -->
     </div>
 
     <div v-if="isUser">
+      <!--       <td>
+        <img v-bind:src="professional.image_url" width="32" height="32" class="rounded-circle my-n1" alt="Avatar" />
+      </td> -->
       <p>Service: {{ appointment.service.name }}</p>
       <p>Professional: {{ appointment.professional.name }}</p>
       <p>Email: {{ appointment.professional.email }}</p>

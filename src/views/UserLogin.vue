@@ -45,6 +45,7 @@ export default {
           localStorage.setItem("isUser", "true");
           localStorage.removeItem("isProfessional");
           this.$router.push("/appointments");
+          this.$parent.image_url = response.data.image_url;
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];

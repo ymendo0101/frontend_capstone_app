@@ -44,6 +44,8 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.removeItem("isUser");
           localStorage.setItem("isProfessional", "true");
+          localStorage.setItem("image_url", response.data.image_url);
+          this.$parent.image_url = response.data.image_url;
           this.$router.push("/appointments");
         })
         .catch(error => {
