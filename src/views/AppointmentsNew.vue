@@ -2,6 +2,11 @@
   <div class="container new">
     <form v-on:submit.prevent="createAppointment()">
       <h1>New Appointment</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div class="form-group">
         Service:
         <select v-model="service_id">

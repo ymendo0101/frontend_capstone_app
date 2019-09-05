@@ -8,7 +8,7 @@
       <nav id="sidebar" class="sidebar">
         <a class="sidebar-brand" href="index.html">
           <svg>
-            <use xlink:href="#ion-ios-pulse-strong"></use>
+            <use xlink:href="#"></use>
           </svg>
           Book Me!
         </a>
@@ -38,7 +38,7 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="/appointments">Appointments</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="/professionals">Professionals</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="/appointments/new">Create appointment</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="/users">Users</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="/users">Clients</a></li>
               </ul>
             </li>
             <li class="sidebar-item">
@@ -329,7 +329,11 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.container {
+  padding-top: 100px;
+}
+</style>
 
 <script>
 export default {

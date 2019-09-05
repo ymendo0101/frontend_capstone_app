@@ -2,10 +2,7 @@
   <div class="about">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title">FullCalendar</h5>
-        <h6 class="card-subtitle text-muted">
-          Open source JavaScript jQuery plugin for a full-sized, drag & drop event calendar.
-        </h6>
+        <h5 class="card-title">Book Me Calendar</h5>
       </div>
       <div class="card-body">
         <div id="fullcalendar"></div>

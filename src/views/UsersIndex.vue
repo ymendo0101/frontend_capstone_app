@@ -54,7 +54,7 @@
                     <td><img v-bind:src="user.image_url" width="32" height="32" class="rounded-circle my-n1" alt="Avatar"></td>
                     <td>{{ user.name }}</td>
                     <td>{{ user.email }}</td>
-                    <td>{{ user.phone_number}}</td>
+                    <td>777-898-0023</td>
                     <!-- <td>{{ appointment.status}}</td> -->
                     <td><span class="badge badge-success">Active</span></td>
                   </tr>
@@ -66,7 +66,7 @@
 
         <div class="col-xxl-3">
           <div class="card">
-            <div class="card-header">
+<!--             <div class="card-header">
               <div class="card-actions float-right">
                 <a href="#" class="mr-1">
                 <i class="align-middle" data-feather="refresh-cw"></i>
@@ -74,30 +74,30 @@
                 <div class="d-inline-block dropdown show">
                   <a href="#" data-toggle="dropdown" data-display="static">
                   <i class="align-middle" data-feather="more-vertical"></i>
-                </a>
+                </a> -->
 
-                  <div class="dropdown-menu dropdown-menu-right">
+<!--                   <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
-              <h5 class="card-title mb-0">Angelica Ramos</h5>
+<!--               <h5 class="card-title mb-0">Angelica Ramos</h5> -->
             </div>
             <div class="card-body">
-              <div class="row no-gutters">
+<!--               <div class="row no-gutters">
                 <div class="col-sm-3 col-xl-12 col-xxl-4 text-center">
                   <img src="img/avatars/avatar-3.jpg" width="64" height="64" class="rounded-circle mt-2" alt="Angelica Ramos">
-                </div>
-                <div class="col-sm-9 col-xl-12 col-xxl-8">
+                </div> -->
+<!--                 <div class="col-sm-9 col-xl-12 col-xxl-8">
                   <strong>About me</strong>
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
                     montes, nascetur ridiculus mus.</p>
-                </div>
-              </div>
+                </div> -->
+<!--               </div> -->
 
-              <table class="table table-sm my-2">
+<!--               <table class="table table-sm my-2">
                 <tbody>
                   <tr>
                     <th>Name</th>
@@ -128,16 +128,19 @@
                     <td><span class="badge badge-success">Active</span></td>
                   </tr>
                 </tbody>
-              </table>
+              </table> -->
             </div>
           </div>
-        </div>
-      </div>
-    </div>
   </div>
+  <!--       </div>
+    </div>
+  </div> -->
 </template>
 
 <style>
+table.dataTable td.dataTables_empty {
+  display: none;
+}
 /*.selected {
   color: green;*/
 </style>
